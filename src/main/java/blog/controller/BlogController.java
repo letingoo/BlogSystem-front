@@ -52,6 +52,7 @@ public class BlogController {
 
         blog.setUser( (User) session.getAttribute("user") );
         blog.setTime(  new Timestamp((new Date()).getTime())  );
+        blog.setUserName( ((User) session.getAttribute("user")).getUserName() );
         service.addBlog(blog);
 
         return "success";

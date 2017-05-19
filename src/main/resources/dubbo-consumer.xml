@@ -10,11 +10,10 @@
         default-lazy-init="false">
 
 
-    <dubbo:application name="blogSystem" />
+    <dubbo:application name="blogSystem-front" />
 
     <dubbo:registry address="zookeeper://127.0.0.1:2181"/>
 
-    <!--<dubbo:reference interface="service.TryTimelineService" id="TryTimeLineService"/>-->
     <dubbo:reference interface="blog.service.BlogService" id="blogService" />
 
     <dubbo:reference interface="comment.service.CommentService" id="commentService" />
@@ -22,5 +21,8 @@
     <dubbo:reference interface="follow.service.FollowService" id="followService" />
 
     <dubbo:reference interface="user.service.UserService" id="userService" />
+
+    <dubbo:reference interface="timeline.service.TimelineViewService" id="timelineViewService" />
+
 
 </beans>
