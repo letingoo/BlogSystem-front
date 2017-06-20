@@ -50,7 +50,7 @@ public class BlogController {
         if ( session.getAttribute("user") == null )
             return "fail";
 
-        blog.setUser( (User) session.getAttribute("user") );
+        //blog.setUser( (User) session.getAttribute("user") );
         blog.setTime(  new Timestamp((new Date()).getTime())  );
         blog.setUserName( ((User) session.getAttribute("user")).getUserName() );
         service.addBlog(blog);

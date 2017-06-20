@@ -89,9 +89,9 @@ public class UserController {
 
         else {
             request.getSession().setAttribute("user", user);
-            Cookie cookie = new Cookie("user", gson.toJson(user));
-            cookie.setMaxAge(6000);
-            response.addCookie(cookie);
+//            Cookie cookie = new Cookie("user", gson.toJson(user));
+//            cookie.setMaxAge(6000);
+//            response.addCookie(cookie);
 
             return "success";
         }
